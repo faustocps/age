@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  background-color: #196f3d;
+}
+
+#age {
+  color: #fafafa;
+  font-size: clamp(1.5rem, 8vw + 2rem, 60px);
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 20px;
+}
+
+@media (max-width: 600px) {
+  #age {
+    font-size: 16px;
+  }
+}

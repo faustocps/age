@@ -4,81 +4,12 @@
     <meta charset="UTF-8" />
     <title>Fausto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: monospace;
-        background-color: #196f3d;
-      }
-
-      #age {
-        color: #fafafa;
-        font-size: clamp(1.5rem, 8vw + 2rem, 60px);
-        font-weight: bold;
-        text-align: center;
-        white-space: nowrap;
-        padding: 0 20px;
-      }
-
-      @media (max-width: 600px) {
-        #age {
-          font-size: 16px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
   </head>
   <body>
     <div id="age"></div>
 
-    <script>
-      function generateRandomColor() {
-        const cores = [
-          "#196F3D", // Verde floresta
-          "#2E4053", // Azul petróleo
-          "#5B2C6F", // Roxo profundo
-          "#922B21", // Vermelho terracota
-          "#1A5276", // Azul oceano
-          "#121212", // Preto
-          "#b9770e", // Laranja
-          "#616a6b", // Cinza
-          "#008080", // Verde
-        ];
-        return cores[Math.floor(Math.random() * cores.length)];
-      }
-
-      document.body.style.backgroundColor = generateRandomColor();
-
-      function age(dateOfBirth) {
-        const today = new Date();
-        const birth = new Date(dateOfBirth);
-        const diffMs = today - birth;
-        const msPerYear = 1000 * 60 * 60 * 24 * 365.2425;
-        return diffMs / msPerYear;
-      }
-
-      function formmatAge(age) {
-        return `Fausto is ${age.toFixed(10)} years old!`;
-      }
-
-      const dateOfBirth = "1991-10-20";
-      const fieldAge = document.getElementById("age");
-
-      function updateAge() {
-        const value = age(dateOfBirth);
-        fieldAge.textContent = formmatAge(value);
-      }
-
-      updateAge();
-      setInterval(updateAge, 100);
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
