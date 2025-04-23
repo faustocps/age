@@ -13,7 +13,7 @@ function generateRandomColor() {
   return cores[Math.floor(Math.random() * cores.length)];
 }
 
-document.body.style.backgroundColor = generateRandomColor();
+// document.body.style.backgroundColor = generateRandomColor();
 
 function age(dateOfBirth) {
   const today = new Date();
